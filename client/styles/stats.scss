@@ -1,0 +1,96 @@
+#stats {
+  color: white;
+}
+.Stats {
+  &::after {
+    background-color: black !important;
+  }
+}
+#stats-skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  margin: {
+    top: 30px;
+    bottom: 10px;
+  }
+}
+.stats-skill {
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+
+  .plusOne {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 12px;
+    .one {
+      color: gold;
+    }
+  }
+}
+.stats-howMany {
+  right: 0px;
+  top: 50px;
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+}
+.stats-howManyStars {
+  top: -50px;
+  right: 55px;
+}
+.stats-hr {
+  background-color: black;
+  position: absolute;
+  width: 100px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.stats-howManyNum {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+
+@media screen and (max-width: 1300px) {
+  #stats-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0px;
+    grid-row-gap: 10px;
+  }
+  .stats-howMany {
+  }
+}
+@media screen and (max-width: 950px) {
+  .mailboxTitle {
+    font-size: 1.5rem;
+    padding-left: 5px;
+  }
+  #stats-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
+    grid-row-gap: 10px;
+    padding-top: 40px;
+  }
+  .stats-howMany {
+    right: 0%;
+
+    top: 40px;
+    position: absolute;
+    display: -webkit-box;
+    display: flex;
+    -webkit-transform: scale(0.6) translateX(0%);
+    transform: scale(0.6) translateX(0%);
+  }
+}
+@media screen and (max-width: 375px) {
+  .stats-skill {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+}

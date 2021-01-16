@@ -1,0 +1,116 @@
+icon {
+  z-index: 2;
+}
+.quests-container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.quests-index {
+  background-color: white;
+  position: relative;
+  padding: 30px;
+  width: 470px;
+  height: 550px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  overflow-y: hidden;
+  .quests-displayContent {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+  }
+}
+
+.quests-display {
+  padding: 30px;
+  background-color: white;
+  height: 550px;
+  width: 590px;
+}
+.quests-indexContainer {
+  display: -webkit-box;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+
+.quests-indexText {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  text-align: left;
+  max-height: 90px;
+}
+.quests-indexTextBody {
+  position: relative;
+  font-size: 0.9rem;
+  width: 100%;
+}
+.quests-indexIcon {
+  font-size: 45px;
+  padding-right: 15px;
+  position: relative;
+  z-index: 1;
+}
+.quests-display {
+  &::after {
+    background-color: white;
+  }
+}
+.quests-displayDescTitle {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.quests-lists {
+  padding-bottom: 20px;
+}
+.quest-button {
+  position: absolute;
+  bottom: 50px;
+}
+
+@media screen and (max-width: 925px) {
+  .quests-container {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
+  .quests-index {
+    position: relative;
+    width: 100%;
+    height: 390px;
+  }
+
+  .quests-display {
+    height: 500px;
+    width: 100%;
+  }
+  .quests-indexTextBody {
+    position: relative;
+    font-size: 0.5rem;
+    width: 100%;
+  }
+  .quests-indexTextHead {
+    font-size: 0.6rem;
+  }
+  .quests-lists {
+    font-size: 0.9rem;
+  }
+}

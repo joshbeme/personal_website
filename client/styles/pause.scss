@@ -1,0 +1,77 @@
+.pause {
+  position: fixed;
+  z-index: 2;
+  width: 70px;
+  height: 75px;
+  right: 5%;
+  top: 10px;
+
+  .pauseText {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .pauseIcon {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+  }
+
+  .pauseMenu {
+    position: fixed;
+    z-index: 2 !important;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    font-size: 1.5rem;
+
+    text-align: center;
+
+    &::after {
+      background-color: white !important;
+    }
+    &::before {
+      background-color: rgba(0, 0, 0, 0.63) !important;
+      border-radius: 4px;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      color: black;
+      text-decoration: none;
+    }
+  }
+  .entireModal {
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2 !important;
+    background-color: rgba(0, 0, 0, 0.63);
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 700px) {
+    .pauseIcon {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    .pause {
+      position: fixed;
+      z-index: 2;
+      width: 45px;
+      height: 50px;
+      right: 10px;
+      top: 10px;
+    }
+  }
+}
